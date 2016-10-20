@@ -12,5 +12,4 @@ public class FtBootStarterApplicationTests {
 	@Test
 	public void contextLoads() {
 	}
-
 }
