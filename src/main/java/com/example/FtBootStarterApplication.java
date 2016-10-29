@@ -40,6 +40,10 @@ class PersonRestController{
 	public List<Person> getAllPerson(){
 		return personRepository.findAll();
 	}
+	@RequestMapping(path="/login")
+	public List<Person> login(){
+		return personRepository.findAll();
+	}	
 	@Autowired
 	PersonRepository personRepository;
 } 
