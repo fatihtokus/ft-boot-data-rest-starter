@@ -36,12 +36,16 @@ class FtCLRunner implements CommandLineRunner{
 
 @RestController
 class PersonRestController{
+	@Autowired
+	PersonRepository personRepository;
+	@RequestMapping(path="/")
+	public List<Person> getAllPerson1(){
+		return getAllPerson();
+	}
 	@RequestMapping(path="/allPerson")
 	public List<Person> getAllPerson(){
 		return personRepository.findAll();
 	}
-	@Autowired
-	PersonRepository personRepository;
 } 
 
 interface PersonRepository extends JpaRepository<Person, Long>{
